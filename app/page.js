@@ -14,7 +14,7 @@ export default function Page() {
   const [dark, setDark] = useState(false);
 
   return (
-    <div className="dark:bg-zinc-900 text-gray-900 dark:text-slate-100 transition-colors">
+    <div className="w-fit dark:bg-zinc-900 text-gray-900 dark:text-slate-100 transition-colors">
       <Header dark={dark} setDark={setDark} />
       <main className="mx-auto px-6 pb-8">
         <Hero />
