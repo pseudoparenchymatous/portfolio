@@ -3,7 +3,7 @@ import Link from "next/link";
 const links = [ 
   {
     label: "Résumé",
-    link: "https://linkedin.com"
+    link: "resume.pdf"
   },
   {
     label: "Video Introduction",
