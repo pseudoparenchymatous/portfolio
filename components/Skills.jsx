@@ -8,6 +8,7 @@ const skills = [
   "HTML",
   "CSS",
   "Tailwind",
+  "PHP",
   "JavaScript",
   "TypeScript",
   "Java",
