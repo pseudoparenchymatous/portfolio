@@ -12,17 +12,17 @@ export default function Page() {
   const [dark, setDark] = useState(false);
 
   return (
-    <div className={dark ? "dark" : ""}>
-      <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
-        <Header dark={dark} setDark={setDark} />
-        <main className="max-w-5xl mx-auto px-6 pb-16">
-          <Hero />
-          <Projects />
-          <SkillsExperience />
-          <Contact />
-          <Footer />
-        </main>
-      </div>
+    <div className="dark:bg-zinc-900 text-gray-900 dark:text-slate-100 transition-colors">
+      <Header dark={dark} setDark={setDark} />
+      <main className="mx-auto px-6 pb-8">
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Education />
+        <Contact />
+        <Footer />
+      </main>
     </div>
   );
 }
