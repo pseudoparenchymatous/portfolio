@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { Github } from "lucide-react";
 
 const projects = [
@@ -42,7 +41,7 @@ export default function Projects() {
         {projects.map(p => (
           <article key={p.title} className="md:grayscale hover:grayscale-0 transition duration-300">
             <div className="border-2 border-green-600">
-              <Image src={p.img} alt="Portrait" width={600} height={333} priority />
+              <img src={p.img} alt="Portrait" width={600} height={333}/>
             </div>
             <h4 className="mt-3 text-2xl font-semibold">{p.title}</h4>
             <p className="mt-2 text-sm opacity-85">{p.description}</p>

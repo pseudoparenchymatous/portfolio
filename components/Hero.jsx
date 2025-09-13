@@ -1,14 +1,13 @@
 "use client";
 
 import { Github, Linkedin, Mail } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
   return (
     <section className="flex flex-col gap-8 py-8 justify-center md:mx-20 lg:flex-row lg:items-end lg:mx-40">
       <div className="flex justify-center">
-        <Image src="/portrait.png" alt="Portrait" width={600} height={900} priority />
+        <img src="/portrait.png" alt="Portrait" width={600} height={900}/>
       </div>
       <div>
         <span className="text-xl">Software Engineering Student</span>
