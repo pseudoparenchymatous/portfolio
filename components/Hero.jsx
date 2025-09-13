@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="flex flex-col gap-8 py-8 justify-center md:mx-20 lg:flex-row lg:items-end lg:mx-40">
       <div className="flex justify-center">
-        <img src="/portrait.png" alt="Portrait" width={600} height={900}/>
+        <img src="portrait.png" alt="Portrait" width={600} height={900}/>
       </div>
       <div>
         <span className="text-xl">Software Engineering Student</span>

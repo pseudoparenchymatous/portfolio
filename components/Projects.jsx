@@ -7,28 +7,28 @@ const projects = [
     title: "Meals on Wheels",
     description: "A real-time web application for a charitable meal delivery platform — full-stack app built with Laravel, React, MySQL.",
     tags: ["Laravel", "React", "MySQL", "TailwindCSS", "shadcn/ui"],
-    img: "/meals-on-wheels.png",
+    img: "meals-on-wheels.png",
     link: "https://github.com/pseudoparenchymatous/meals-on-wheels" 
   },
   {
     title: "Jumpstart",
     description: "An AI-powered chatbot that answers customer questions in real time. Integrated Google Gemini with a Next.js + React + TailwindCSS frontend to deliver a smooth user experience.",
     tags: ["Next.js", "React", "TailwindCSS", "Google Gemini", "AI"],
-    img: "/jumpstart.png",
+    img: "jumpstart.png",
     link: "https://github.com/pseudoparenchymatous/jumpstart-chatbot" 
   },
   {
     title: "Enomy Finances",
     description: "A finance manager system. Includes user authentication and management, transaction history, currency conversion, and investment calculator.",
     tags: ["Spring", "Java", "JSP", "Hibernate"],
-    img: "/enomy.png",
+    img: "enomy.png",
     link: "https://github.com/pseudoparenchymatous/enomy-finances" 
   },
   {
     title: "DoBu Martial Arts",
     description: "A promotional site for a martial arts academy showcasing classes, schedules, and facility features.", 
     tags: ["HTML", "CSS", "JavaScript"], 
-    img: "/dobu.png",
+    img: "dobu.png",
     link: "https://github.com/pseudoparenchymatous/dobu-website" 
   },
 ];
