@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { notoSerif } from "@/app/ui/fonts";
-import { crimsonText } from "@/app/ui/fonts";
 
 const links = [ 
   {

@@ -1,8 +1,5 @@
 "use client";
 
-import { crimsonText } from "@/app/ui/fonts";
-import { motion } from "framer-motion";
-
 const education = [
   {
     degree: "Applied Degree in Software Engineering",

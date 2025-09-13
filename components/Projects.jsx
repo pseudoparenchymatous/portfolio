@@ -1,47 +1,64 @@
 "use client";
 
-import { motion } from "framer-motion";
+import Image from "next/image";
+import { Github } from "lucide-react";
 
 const projects = [
   {
-    title: "Meals on Wheels (MerryMeal)",
-    description: "Charitable meal delivery platform — full-stack app built with Laravel, React, MySQL.",
+    title: "Meals on Wheels",
+    description: "A real-time web application for a charitable meal delivery platform — full-stack app built with Laravel, React, MySQL.",
     tags: ["Laravel", "React", "MySQL", "TailwindCSS", "shadcn/ui"],
-    link: "#" 
+    img: "/meals-on-wheels.png",
+    link: "https://github.com/pseudoparenchymatous/meals-on-wheels" 
   },
   {
-    title: "Jumpstart — AI Chatbot",
-    description: "Built an AI-powered chatbot that answers customer questions in real time. Integrated Google Gemini with a Next.js + React + TailwindCSS frontend to deliver a smooth user experience.",
+    title: "Jumpstart",
+    description: "An AI-powered chatbot that answers customer questions in real time. Integrated Google Gemini with a Next.js + React + TailwindCSS frontend to deliver a smooth user experience.",
     tags: ["Next.js", "React", "TailwindCSS", "Google Gemini", "AI"],
-    link: "#"
+    img: "/jumpstart.png",
+    link: "https://github.com/pseudoparenchymatous/jumpstart-chatbot" 
   },
   {
-    title: "DoBu Martial Arts — Marketing Site",
+    title: "Enomy Finances",
+    description: "A finance manager system. Includes user authentication and management, transaction history, currency conversion, and investment calculator.",
+    tags: ["Spring", "Java", "JSP", "Hibernate"],
+    img: "/enomy.png",
+    link: "https://github.com/pseudoparenchymatous/enomy-finances" 
+  },
+  {
+    title: "DoBu Martial Arts",
     description: "A promotional site for a martial arts academy showcasing classes, schedules, and facility features.", 
     tags: ["HTML", "CSS", "JavaScript"], 
-    link: "#" 
+    img: "/dobu.png",
+    link: "https://github.com/pseudoparenchymatous/dobu-website" 
   },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="pt-8">
-      <h3 className="text-xl font-semibold">Selected Projects</h3>
-      <p className="mt-1 text-sm opacity-80">Case studies, prototypes, and production apps.</p>
-      <div className="mt-6 grid md:grid-cols-2 gap-6">
-        {projects.map((p, i) => (
-          <motion.article key={p.title} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.04 * i }} className="rounded-xl p-5 bg-gray-50 dark:bg-gray-800 shadow-sm">
-            <h4 className="text-lg font-semibold">{p.title}</h4>
+    <section id="projects" className="mt-12 mx-auto w-[600px]">
+      <h3 className=" text-2xl">Featured Projects</h3>
+      <div className="mt-5 grid md:grid-cols-2 gap-10">
+        {projects.map(p => (
+          <article key={p.title} className="md:grayscale hover:grayscale-0 transition duration-300">
+            <div className="border-2 border-green-600">
+              <Image src={p.img} alt="Portrait" width={600} height={333} priority />
+            </div>
+            <h4 className="mt-3 text-2xl font-semibold">{p.title}</h4>
             <p className="mt-2 text-sm opacity-85">{p.description}</p>
-            <div className="mt-3 flex flex-wrap gap-2">
-              {p.tags.map((t) => (
-                <span key={t} className="text-xs px-2 py-1 rounded bg-white/50 dark:bg-black/30 border">{t}</span>
-              ))}
+            <div className="flex items-center justify-between">
+              <div className="mt-3 flex flex-wrap gap-3">
+                {p.tags.map((t) => (
+                  <span key={t} className="dark:text-green-300 text-sm">{t}</span>
+                ))}
+              </div>
+              <div className="mt-3">
+                <a href={p.link} className="inline-flex items-center gap-2 px-3 py-2" rel="noopener noreferrer">
+                  <Github/>
+                </a>
+              </div>
             </div>
-            <div className="mt-3">
-              <a href={p.link} className="inline-flex items-center gap-2 px-3 py-2 border rounded-md text-sm" rel="noopener noreferrer">View</a>
-            </div>
-          </motion.article>
+          </article>
         ))}
       </div>
     </section>
