@@ -8,28 +8,32 @@ const projects = [
     description: "A real-time web application for a charitable meal delivery platform — full-stack app built with Laravel, React, MySQL.",
     tags: ["Laravel", "React", "MySQL", "TailwindCSS", "shadcn/ui"],
     img: "meals-on-wheels.png",
-    link: "https://github.com/pseudoparenchymatous/meals-on-wheels" 
+    link: "https://github.com/pseudoparenchymatous/meals-on-wheels",
+    live: "#",
   },
   {
     title: "Jumpstart",
     description: "An AI-powered chatbot that answers customer questions in real time. Integrated Google Gemini with a Next.js + React + TailwindCSS frontend to deliver a smooth user experience.",
     tags: ["Next.js", "React", "TailwindCSS", "Google Gemini", "AI"],
     img: "jumpstart.png",
-    link: "https://github.com/pseudoparenchymatous/jumpstart-chatbot" 
+    link: "https://github.com/pseudoparenchymatous/jumpstart-chatbot",
+    live: "#",
   },
   {
     title: "Enomy Finances",
     description: "A finance manager system. Includes user authentication and management, transaction history, currency conversion, and investment calculator.",
     tags: ["Spring", "Java", "JSP", "Hibernate"],
     img: "enomy.png",
-    link: "https://github.com/pseudoparenchymatous/enomy-finances" 
+    link: "https://github.com/pseudoparenchymatous/enomy-finances",
+    live: "#",
   },
   {
     title: "DoBu Martial Arts",
     description: "A promotional site for a martial arts academy showcasing classes, schedules, and facility features.", 
     tags: ["HTML", "CSS", "JavaScript"], 
     img: "dobu.png",
-    link: "https://github.com/pseudoparenchymatous/dobu-website" 
+    link: "https://github.com/pseudoparenchymatous/dobu-website",
+    live: "https://pseudoparenchymatous.github.io/dobu-website",
   },
 ];
 
@@ -41,7 +45,9 @@ export default function Projects() {
         {projects.map(p => (
           <article key={p.title} className="md:grayscale hover:grayscale-0 transition duration-300">
             <div className="border-2 border-green-600">
+              <a href={p.live} >
               <img src={p.img} alt="Portrait" width={600} height={333}/>
+              </a>
             </div>
             <h4 className="mt-3 text-2xl font-semibold">{p.title}</h4>
             <p className="mt-2 text-sm opacity-85">{p.description}</p>
