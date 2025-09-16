@@ -46,13 +46,13 @@ export default function Projects() {
             <h4 className="mt-3 text-2xl font-semibold">{p.title}</h4>
             <p className="mt-2 text-sm opacity-85">{p.description}</p>
             <div className="flex items-center justify-between">
-              <div className="mt-3 flex flex-wrap gap-3">
+              <div className="mt-3 flex flex-wrap gap-3 text-green-600 dark:text-green-300">
                 {p.tags.map((t) => (
-                  <span key={t} className="dark:text-green-300 text-sm">{t}</span>
+                  <span key={t} className="text-sm">{t}</span>
                 ))}
               </div>
               <div className="mt-3">
-                <a href={p.link} className="inline-flex items-center gap-2 px-3 py-2" rel="noopener noreferrer">
+                <a href={p.link} className="inline-flex items-center gap-2 p-2 rounded-full" rel="noopener noreferrer">
                   <Github/>
                 </a>
               </div>
