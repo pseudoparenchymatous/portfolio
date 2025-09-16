@@ -10,7 +10,7 @@ export default function Hero() {
         <img src="portrait.png" alt="Portrait" width={600} height={900}/>
       </div>
       <div>
-        <span className="text-xl">Software Engineering Student</span>
+        <span className="text-xl">Full-Stack Developer</span>
         <Link href="#about"  className="mt-2 text-9xl font-bold hover:underline">
           <h2 className="hover:cursor-default">
             Georey Saliente
