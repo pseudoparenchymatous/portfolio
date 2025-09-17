@@ -7,7 +7,7 @@ const links = [
   },
   {
     label: "Video Introduction",
-    link: "https://youtu.be/aF6ToWbfLSM"
+    link: "https://youtu.be/poEdf7tx2r0"
   },
   {
     label: "Email",
