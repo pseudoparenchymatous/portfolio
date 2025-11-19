@@ -24,3 +24,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.animate-about {
+  --clip-value: 100%;
+}
+
+.animate-about::before {
+  content: attr(data-text);
+  clip-path: inset(0 0 var(--clip-value) 0);
+  will-change: clip-path;
+}
