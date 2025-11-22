@@ -4,8 +4,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import { useRef } from "react";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const links = [ 
   {
     label: "Résumé",

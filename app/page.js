@@ -3,6 +3,8 @@
 import "lenis/dist/lenis.css";
 import { useState } from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ReactLenis, useLenis } from "lenis/react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -13,6 +15,9 @@ import Footer from "@/components/Footer";
 import Education from "@/components/Education";
 import About from "@/components/About";
 import { useEffect, useRef } from "react";
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const lenisOptions = {
   autoRaf: false,
