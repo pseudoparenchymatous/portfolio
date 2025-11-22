@@ -41,7 +41,7 @@ export default function Page() {
     <ReactLenis ref={lenisRef} root options={lenisOptions}>
       <div className="w-full dark:bg-zinc-900 text-gray-900 dark:text-slate-100 transition-colors">
         <Header dark={dark} setDark={setDark} />
-        <main className="pb-8">
+        <main>
           <Hero />
           <About />
           <Projects />
