@@ -1,5 +1,6 @@
 "use client";
 
+import "lenis/dist/lenis.css";
 import { useState } from "react";
 import gsap from "gsap";
 import { ReactLenis, useLenis } from "lenis/react";
