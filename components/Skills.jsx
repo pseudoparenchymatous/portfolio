@@ -69,7 +69,7 @@ function SkillNames({ skillNamesRef, skillNameContainersRef }) {
             ref={el => skillNamesRef.current[index] = el}
             className={
               clsx(
-                "absolute w-full text-center uppercase text-[4rem] font-bold select-none md:text-7xl",
+                "absolute w-full text-center uppercase text-[4rem] font-black select-none md:text-7xl",
                 { "text-white -translate-y-1/1": index === 0 },
                 { "text-red-500 translate-y-1/1": index !== 0 },
             )}
