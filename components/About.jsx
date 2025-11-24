@@ -88,13 +88,13 @@ export default function About() {
         className="relative w-full h-svh flex flex-col justify-center items-center overflow-hidden"
       >
         <div className="about-header relative w-full px-[2rem] flex justify-center will-change-transform translate-x-full translate-y-0">
-          <img className="object-contain dark:bg-zinc-900" src="/about-me.svg" alt="About me header" />
+          <img className="object-contain dark:bg-zinc-900" src="about-me.svg" alt="About me header" />
         </div>
         <div className="about-header relative w-full px-[2rem] flex justify-center will-change-transform -translate-x-full translate-y-0 z-2">
-          <img className="object-contain dark:bg-zinc-900" src="/about-me.svg" alt="About me header" />
+          <img className="object-contain dark:bg-zinc-900" src="about-me.svg" alt="About me header" />
         </div>
         <div className="about-header relative w-full px-[2rem] flex justify-center will-change-transform translate-x-full translate-y-0">
-          <img className="object-contain dark:bg-zinc-900" src="/about-me.svg" alt="About me header" />
+          <img className="object-contain dark:bg-zinc-900" src="about-me.svg" alt="About me header" />
         </div>
       </div>
       <section 

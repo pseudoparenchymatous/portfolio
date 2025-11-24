@@ -9,21 +9,21 @@ import { useRef } from "react";
 const contactsData = [
   {
     label: "GitHub",
-    image: "/github-logo.png",
+    image: "github-logo.png",
     link: "https://github.com/pseudoparenchymatous",
     z: "2",
     cardStyle: "md:translate-x-3/1 md:-translate-y-1/2 md:scale-[0.75] md:rotate-20",
   },
   {
     label: "LinkedIn",
-    image: "/linkedin-logo.png",
+    image: "linkedin-logo.png",
     link: "https://linkedin.com/in/georey-saliente",
     z: "1",
     cardStyle: "md:translate-x-2/1 md:-translate-y-1/2 md:scale-[0.75] md:rotate-20",
   },
   {
     label: "Email",
-    image: "/gmail-logo.png",
+    image: "gmail-logo.png",
     link: "mailto:georeysaliente@gmail.com",
     z: "0",
     cardStyle: "md:translate-x-1/1 md:-translate-y-1/2 md:scale-[0.75] md:rotate-20",

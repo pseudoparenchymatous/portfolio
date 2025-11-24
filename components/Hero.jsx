@@ -118,7 +118,7 @@ export default function Hero() {
       <img 
         ref={textureImageRef}
         id="glassTexture"
-        src="/hero.jpg"
+        src="hero.jpg"
         className="hidden"
         alt="Hero image"
       />
