@@ -24,7 +24,6 @@ const lenisOptions = {
 };
 
 export default function Page() {
-  const [dark, setDark] = useState(false);
   const lenisRef = useRef(null);
 
   useEffect(() => {
@@ -39,8 +38,8 @@ export default function Page() {
 
   return (
     <ReactLenis ref={lenisRef} root options={lenisOptions}>
-        <Header dark={dark} setDark={setDark} />
       <div className="w-full bg-zinc-900 text-slate-100 transition-colors">
+        <Header/>
         <main>
           <Hero />
           <About />

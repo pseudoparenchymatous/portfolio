@@ -1,9 +1,8 @@
 "use client";
 
-import { Sun, Moon } from "lucide-react";
 import Link from "next/link";
 
-export default function Header({ dark, setDark }) {
+export default function Header() {
   return (
     <header className="max-w-5xl mx-auto px-6 py-10 flex items-center justify-between">
       <div>
