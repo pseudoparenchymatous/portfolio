@@ -10,13 +10,13 @@ const educationData = [
     degree: "Applied Degree in Software Engineering",
     institution: "Lithan Academy",
     years: "2024 – Present",
-    bg: "bg-[url(lithan-academy.jpg)]",
+    bg: "bg-[url(/lithan-academy.jpg)]",
   },
   {
     degree: "Bachelor of Science in Information Technology",
     institution: "University of Cebu",
     years: "2024 – Present",
-    bg: "bg-[url(uc.jpg)]",
+    bg: "bg-[url(/uc.jpg)]",
   },
 ];
 
