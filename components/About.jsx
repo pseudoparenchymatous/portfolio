@@ -103,7 +103,7 @@ export default function About() {
       >
         <p ref={aboutTextRef} className="animate-about text-gray-700 relative w-full my-0 mx-auto text-4xl md:text-6xl md:w-[60%] before:absolute before:top-0 before:left-0 before:text-white">
           I enjoy solving real-world problems with technology and aim to become
-          a <span className="ttext-green-700 darktext-green-500">full-stack developer</span> contributing to impactful projects.
+          a full-stack developer contributing to impactful projects.
         </p>
       <div className="mt-10 flex justify-center gap-3">
         {links.map((item, i) => (
