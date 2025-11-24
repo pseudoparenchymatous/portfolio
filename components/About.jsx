@@ -101,7 +101,7 @@ export default function About() {
         id="aboutSection"
         className="relative w-full h-fit mt-[155svh] pt-[2rem] pr-[2rem] pb-[25svh] pl-[2rem] text-center"
       >
-        <p ref={aboutTextRef} className="animate-about text-gray-700 relative w-full my-0 mx-auto text-4xl md:text-6xl md:w-[60%] before:absolute before:top-0 before:left-0 before:text-white">
+        <p ref={aboutTextRef} className="animate-about text-neutral-700 relative w-full my-0 mx-auto text-4xl md:text-6xl md:w-[60%] before:absolute before:top-0 before:left-0 before:text-white">
           I enjoy solving real-world problems with technology and aim to become
           a full-stack developer contributing to impactful projects.
         </p>
