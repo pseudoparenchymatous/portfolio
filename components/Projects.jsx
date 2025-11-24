@@ -1,12 +1,16 @@
 "use client";
 
-import { Github } from "lucide-react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ExternalLink } from "lucide-react";
+import { useRef } from "react";
 
-const projects = [
+const projectsData = [
   {
     title: "Meals on Wheels",
     description: "A real-time web application for a charitable meal delivery platform — full-stack app built with Laravel, React, MySQL.",
-    tags: ["Laravel", "React", "MySQL", "TailwindCSS", "shadcn/ui"],
+    tags: ["Laravel", "React", "MySQL",],
     img: "meals-on-wheels.png",
     link: "https://github.com/pseudoparenchymatous/meals-on-wheels",
     live: "#",
@@ -14,7 +18,7 @@ const projects = [
   {
     title: "Jumpstart",
     description: "An AI-powered chatbot that answers customer questions in real time. Integrated Google Gemini with a Next.js + React + TailwindCSS frontend to deliver a smooth user experience.",
-    tags: ["Next.js", "React", "TailwindCSS", "Google Gemini", "AI"],
+    tags: ["Next.js", "React", "Google Gemini",],
     img: "jumpstart.png",
     link: "https://github.com/pseudoparenchymatous/jumpstart-chatbot",
     live: "#",
@@ -22,7 +26,7 @@ const projects = [
   {
     title: "Enomy Finances",
     description: "A finance manager system. Includes user authentication and management, transaction history, currency conversion, and investment calculator.",
-    tags: ["Spring", "Java", "JSP", "Hibernate"],
+    tags: ["Spring", "Java", "JSP",],
     img: "enomy.png",
     link: "https://github.com/pseudoparenchymatous/enomy-finances",
     live: "#",
@@ -38,34 +42,89 @@ const projects = [
 ];
 
 export default function Projects() {
+  const projectsSectionRef = useRef(null);
+  const projectCardsRef = useRef([]);
+
+  useGSAP(() => {
+    const projectCards = projectCardsRef.current;
+    projectCards.forEach((card, index) => {
+      if (index < projectCards.length - 1) {
+        ScrollTrigger.create({
+          trigger: card,
+          start: "top top",
+          endTrigger: projectCards[projectCards.length - 1],
+          end: "top top",
+          pin: true,
+          pinSpacing: false,
+        });
+
+        ScrollTrigger.create({
+          trigger: projectCards[index + 1],
+          start: "top bottom",
+          end: "top top",
+          onUpdate: (self) => {
+            const progress = self.progress;
+            const scale = 1 - progress * 0.25;
+            const rotation = (index % 2 === 0 ? 5: -5) * progress;
+            const afterOpacity = progress;
+
+            gsap.set(card, {
+              scale: scale,
+              rotation: rotation,
+              "--after-opacity": afterOpacity,
+            })
+          },
+        });
+      }
+    });
+  }, { scope: projectsSectionRef });
+
   return (
-    <section id="projects" className="mt-12 mx-auto w-[600px]">
-      <h3 className=" text-2xl">Featured Projects</h3>
-      <div className="mt-5 grid md:grid-cols-2 gap-10">
-        {projects.map(p => (
-          <article key={p.title} className="md:grayscale hover:grayscale-0 transition duration-300">
-            <div className="border-2 border-green-600">
-              <a href={p.live} >
-              <img src={p.img} alt="Portrait" width={600} height={333}/>
-              </a>
+    <>
+      <section 
+        ref={projectsSectionRef}
+        className="relative w-full h-full"
+      >
+        <div className="relative w-full h-svh grid place-content-center text-9xl font-bold">
+          <h1>Projects</h1>
+        </div>
+        {projectsData.map((project, index) => (
+          <div 
+            ref={el => projectCardsRef.current[index] = el}
+            key={index}
+            className="project-card relative w-full h-svh bg-neutral-200 text-black p-[1.5rem] flex flex-col gap-0 will-change-transform md:flex-row md:gap-[3rem]"
+          >
+            <div className="project-card-index text-5xl text-red-700 flex-1 font-bold md:flex-2 ">
+              <h2>{"0" + (index + 1)}</h2>
             </div>
-            <h4 className="mt-3 text-2xl font-semibold">{p.title}</h4>
-            <p className="mt-2 text-sm opacity-85">{p.description}</p>
-            <div className="flex items-center justify-between">
-              <div className="mt-3 flex flex-wrap gap-3 text-green-600 dark:text-green-300">
-                {p.tags.map((t) => (
-                  <span key={t} className="text-sm">{t}</span>
-                ))}
-              </div>
-              <div className="mt-3">
-                <a href={p.link} className="inline-flex items-center gap-2 p-2 rounded-full" rel="noopener noreferrer">
-                  <Github/>
+            <div className="project-card-content flex-4 pt-[1.5rem]">
+              <div className="project-card-content-wrapper w-full flex flex-col gap-[1.5rem] md:w-3/4 ">
+                <a href={project.link} target="_blank" className="flex items-center hover:underline">
+                  <h3 className="project-card-header text-5xl font-bold w-3/4">{project.title}</h3>
+                  <ExternalLink />
                 </a>
+                <div className="project-card-img">
+                  <img 
+                    src={project.img}
+                    alt=""
+                    className="w-full h-full object-cover aspect-16/9"
+                  />
+                </div>
+                <div className="project-card-details flex flex-col gap-[0.5rem] md:flex-row md:gap-[1.5rem]">
+                  <div className="project-card-details-tags text-sm text-red-800 flex gap-2 flex-2 uppercase">
+                    {project.tags.map((tag, index) => (
+                      <span key={index}>{tag}</span>
+                    ))}
+                  </div>
+                  <div className="project-card-details-description flex-4">
+                    <p>{project.description}</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </article>
+          </div>
         ))}
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
