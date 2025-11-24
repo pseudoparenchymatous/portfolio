@@ -122,7 +122,7 @@ export default function Hero() {
         className="hidden"
         alt="Hero image"
       />
-      <div id="heroContent" className="absolute left-0 bottom-0 w-full flex flex-col-reverse p-10 md:flex-row md:justify-between md:items-end">
+      <div id="heroContent" className="text-white absolute left-0 bottom-0 w-full flex flex-col-reverse p-10 md:flex-row md:justify-between md:items-end">
         <h1 className="text-7xl">Georey S. Saliente</h1>
         <p>Software Developer</p>
       </div>
