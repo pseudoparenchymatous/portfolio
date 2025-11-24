@@ -102,52 +102,37 @@ export default function Skills() {
     gsap.set(defaultLetters, { y: "100%" });
 
     const skillImages = skillImagesRef.current;
-    if (window.innerWidth >= 900) {
-      skillImages.forEach((img, index) => {
-        const correspondingName = skillNameContainers[index];
-        const letters = correspondingName.querySelectorAll(".letter");
+    skillImages.forEach((img, index) => {
+      const correspondingName = skillNameContainers[index];
+      const letters = correspondingName.querySelectorAll(".letter");
 
-        img.addEventListener("mouseenter", () => {
-          gsap.to(img, {
-            width: 140,
-            height: 140,
-            duration: 0.5,
-            ease: "power4.out",
-          });
-
-          gsap.to(letters, {
-            y: "-100%",
-            ease: "power4.out",
-            duration: 0.75,
-            stagger: {
-              each: 0.025,
-              from: "center",
-            }
-          });
+      img.addEventListener("mouseenter", () => {
+        gsap.to(img, {
+          width: 140,
+          height: 140,
+          duration: 0.5,
+          ease: "power4.out",
         });
 
-        img.addEventListener("mouseleave", () => {
-          gsap.to(img, {
-            width: 70,
-            height: 70,
-            duration: 0.5,
-            ease: "power4.out",
-          });
-          gsap.to(letters, {
-            y: "0%",
-            ease: "power4.out",
-            duration: 0.75,
-            stagger: {
-              each: 0.025,
-              from: "center",
-            },
-          });
+        gsap.to(letters, {
+          y: "-100%",
+          ease: "power4.out",
+          duration: 0.75,
+          stagger: {
+            each: 0.025,
+            from: "center",
+          }
         });
       });
 
-      const skillImagesContainer = skillImagesContainerRef.current;
-      skillImagesContainer.addEventListener("mouseenter", () => {
-        gsap.to(defaultLetters, {
+      img.addEventListener("mouseleave", () => {
+        gsap.to(img, {
+          width: 70,
+          height: 70,
+          duration: 0.5,
+          ease: "power4.out",
+        });
+        gsap.to(letters, {
           y: "0%",
           ease: "power4.out",
           duration: 0.75,
@@ -157,18 +142,31 @@ export default function Skills() {
           },
         });
       });
-      skillImagesContainer.addEventListener("mouseleave", () => {
-        gsap.to(defaultLetters, {
-          y: "100%",
-          ease: "power4.out",
-          duration: 0.75,
-          stagger: {
-            each: 0.025,
-            from: "center",
-          },
-        });
+    });
+
+    const skillImagesContainer = skillImagesContainerRef.current;
+    skillImagesContainer.addEventListener("mouseenter", () => {
+      gsap.to(defaultLetters, {
+        y: "0%",
+        ease: "power4.out",
+        duration: 0.75,
+        stagger: {
+          each: 0.025,
+          from: "center",
+        },
       });
-    }
+    });
+    skillImagesContainer.addEventListener("mouseleave", () => {
+      gsap.to(defaultLetters, {
+        y: "100%",
+        ease: "power4.out",
+        duration: 0.75,
+        stagger: {
+          each: 0.025,
+          from: "center",
+        },
+      });
+    });
   }, []);
 
   return (
