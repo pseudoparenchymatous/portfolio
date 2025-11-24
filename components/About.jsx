@@ -107,7 +107,7 @@ export default function About() {
         </p>
       <div className="mt-10 flex justify-center gap-3">
         {links.map((item, i) => (
-          <Link href={item.link} key={i} target="_blank" className="border px-3 py-1 text-sm rounded border-gray-400 dark:border-gray-700 hover:border-green-600">
+          <Link href={item.link} key={i} target="_blank" className="border px-3 py-1 text-sm rounded border-gray-400 dark:border-gray-700 hover:border-red-600">
             {item.label}
           </Link>
         ))}
