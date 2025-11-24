@@ -85,7 +85,7 @@ export default function Projects() {
         ref={projectsSectionRef}
         className="relative w-full h-full"
       >
-        <div className="relative w-full h-[30svh] grid justify-center text-8xl md:text-9xl font-bold">
+        <div className="relative w-full h-[30svh] grid justify-center text-7xl md:text-9xl font-bold">
           <h1>Projects</h1>
         </div>
         {projectsData.map((project, index) => (

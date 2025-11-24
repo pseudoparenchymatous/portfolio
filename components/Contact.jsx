@@ -82,7 +82,6 @@ export default function Contact() {
             } else if (progress > entranceEnd) {
               gsap.set(contact, { y: `0%` });
             }
-
           });
         },
       });
@@ -175,7 +174,7 @@ export default function Contact() {
               <img className="w-full h-full object-cover" src={contact.image} alt={contact.label}/>
             </div>
             <div className="contact-info">
-              <h5 className="uppercase font-bold text-5xl flex items-center gap-2">
+              <h5 className="uppercase font-bold text-4xl flex items-center gap-2">
                 {contact.label} <ExternalLink size={40}/>
               </h5>
             </div>
