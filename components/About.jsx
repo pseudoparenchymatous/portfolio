@@ -56,7 +56,7 @@ export default function About() {
           gsap.set(headers[2], { y: "-100%" });
 
           const scaleProgress = (self.progress - 0.5) / 0.5;
-          const minScale = 0.2;
+          const minScale = 0.4;
           const scale = 1 - scaleProgress * (1 - minScale);
 
           headers.forEach(header => gsap.set(header, { scale }));
