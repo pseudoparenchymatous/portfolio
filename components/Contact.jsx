@@ -157,7 +157,7 @@ export default function Contact() {
     <section 
       ref={contactSectionRef}
       id="contactSection"
-      className="relative w-full h-[250svh] overflow-hidden p-15 flex flex-col items-center gap-10 md:flex-row md:h-svh md:items-start"
+      className="relative w-full overflow-hidden p-15 flex flex-col items-center gap-10 md:flex-row md:h-svh md:items-start"
     >
       {contactsData.map(contact => (
         <div 
@@ -167,7 +167,7 @@ export default function Contact() {
           <a 
             href={contact.link}
             target="_blank"
-            className={"contact-card text-black absolute top-1/2 left-1/2 -translate-1/2 scale-[1] rotate-0 w-[calc(100%+4px)] h-[calc(100%+4px)] p-9 flex flex-col items-center gap-9 bg-neutral-200 border-2 rounded-xl hover:underline will-change-transform " + contact.cardStyle}
+            className={"contact-card text-black md:absolute md:top-1/2 md:left-1/2 md:-translate-1/2 scale-[1] rotate-0 w-[calc(100%+4px)] h-fit md:h-[calc(100%+4px)] p-9 flex flex-col items-center gap-9 bg-neutral-200 border-2 rounded-xl hover:underline will-change-transform " + contact.cardStyle}
           >
             <div className="aspect-square rounded-lg overflow-hidden bg-white w-full">
               <img className="w-full h-full object-cover" src={contact.image} alt={contact.label}/>
