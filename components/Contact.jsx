@@ -49,7 +49,7 @@ export default function Contact() {
         cardSlideAnimation.kill();
       }
 
-      if (window.innerWidth < 1000) {
+      if (window.innerWidth < 768) {
         contacts.forEach(contact => {
           gsap.set(contact, { clearProps: "all" });
         });
