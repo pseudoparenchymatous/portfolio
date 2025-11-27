@@ -43,7 +43,7 @@ function SkillImages({ skillImagesRef, skillImagesContainerRef }) {
         <div 
           ref={el => skillImagesRef.current[index] = el}
           key={index}
-          className="relative w-[60px] h-[60px] p-[2.5px] cursor-pointer will-change-[width,height] md:w-[70px] md:h-[70px] md:p-[5px]"
+          className="relative w-[70px] h-[70px] p-[5px] cursor-pointer will-change-[width,height]"
         >
             <img 
               src={skill.img}
