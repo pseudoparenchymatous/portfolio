@@ -59,7 +59,7 @@ function SkillImages({ skillImagesRef, skillImagesContainerRef }) {
 
 function SkillNames({ skillNamesRef, skillNameContainersRef }) {
   return (
-    <div className="skill-names w-full h-[5rem] overflow-hidden md:h-9xl">
+    <div className="skill-names w-full h-[5rem] overflow-hidden md:h-[8rem]">
       {skillsList.map((skill, index) => (
         <div 
           ref={el => skillNameContainersRef.current[index] = el}
@@ -69,7 +69,7 @@ function SkillNames({ skillNamesRef, skillNameContainersRef }) {
             ref={el => skillNamesRef.current[index] = el}
             className={
               clsx(
-                "absolute w-full text-center uppercase text-[3rem] font-black select-none md:text-6xl",
+                "absolute w-full text-center uppercase text-[3rem] font-black select-none md:text-[6rem]",
                 { "text-white -translate-y-1/1": index === 0 },
                 { "text-red-500 translate-y-1/1": index !== 0 },
             )}
