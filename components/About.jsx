@@ -87,14 +87,16 @@ export default function About() {
         id="aboutHeaders"
         className="relative w-full h-svh flex flex-col justify-center items-center overflow-hidden"
       >
-        <div className="about-header relative w-full px-[2rem] flex justify-center will-change-transform translate-x-full translate-y-0">
-          <img className="object-contain dark:bg-zinc-900" src="about-me.svg" alt="About me header" />
-        </div>
-        <div className="about-header relative w-full px-[2rem] flex justify-center will-change-transform -translate-x-full translate-y-0 z-2">
-          <img className="object-contain dark:bg-zinc-900" src="about-me.svg" alt="About me header" />
-        </div>
-        <div className="about-header relative w-full px-[2rem] flex justify-center will-change-transform translate-x-full translate-y-0">
-          <img className="object-contain dark:bg-zinc-900" src="about-me.svg" alt="About me header" />
+        <div className="text-6xl md:text-9xl uppercase font-bold"> 
+          <div className="about-header relative w-full px-[2rem] flex justify-center will-change-transform translate-x-full translate-y-0">
+            <h2 className="bg-zinc-900">About Me</h2>
+          </div>
+          <div className="about-header relative w-full px-[2rem] flex justify-center will-change-transform -translate-x-full translate-y-0 z-2">
+            <h2 className="bg-zinc-900">About Me</h2>
+          </div>
+          <div className="about-header relative w-full px-[2rem] flex justify-center will-change-transform translate-x-full translate-y-0">
+            <h2 className="bg-zinc-900">About Me</h2>
+          </div>
         </div>
       </div>
       <section 
