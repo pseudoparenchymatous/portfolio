@@ -164,7 +164,6 @@ export default function Contact() {
           key={contact.label}
           className={"contact max-w-[400px] flex-1 relative w-full h-full border-1 border-dashed rounded-xl translate-y-0! will-change-transform md:translate-y-5/4 z-" + contact.z}
         >
-          <div className="contact-initial"></div>
           <a 
             href={contact.link}
             target="_blank"
