@@ -99,7 +99,7 @@ export default function Skills() {
 
     const skillNameContainers = skillNameContainersRef.current;
     const defaultLetters = skillNameContainers[0].querySelectorAll(".letter");
-    gsap.set(defaultLetters, { y: "100%" });
+    gsap.set(defaultLetters, { yPercent: 100 });
 
     const skillImages = skillImagesRef.current;
     skillImages.forEach((img, index) => {
@@ -115,7 +115,7 @@ export default function Skills() {
         });
 
         gsap.to(letters, {
-          y: "-100%",
+          yPercent: -100,
           ease: "power4.out",
           duration: 0.75,
           stagger: {
@@ -133,7 +133,7 @@ export default function Skills() {
           ease: "power4.out",
         });
         gsap.to(letters, {
-          y: "0%",
+          yPercent: 0,
           ease: "power4.out",
           duration: 0.75,
           stagger: {
@@ -147,7 +147,7 @@ export default function Skills() {
     const skillImagesContainer = skillImagesContainerRef.current;
     skillImagesContainer.addEventListener("mouseenter", () => {
       gsap.to(defaultLetters, {
-        y: "0%",
+        yPercent: 0,
         ease: "power4.out",
         duration: 0.75,
         stagger: {
@@ -158,7 +158,7 @@ export default function Skills() {
     });
     skillImagesContainer.addEventListener("mouseleave", () => {
       gsap.to(defaultLetters, {
-        y: "100%",
+        yPercent: 100,
         ease: "power4.out",
         duration: 0.75,
         stagger: {
