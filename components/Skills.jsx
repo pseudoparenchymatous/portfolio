@@ -123,16 +123,8 @@ export default function Skills() {
             from: "center",
           }
         });
-      });
 
-      img.addEventListener("mouseleave", () => {
-        gsap.to(img, {
-          width: 70,
-          height: 70,
-          duration: 0.5,
-          ease: "power4.out",
-        });
-        gsap.to(letters, {
+        gsap.to(defaultLetters, {
           yPercent: 0,
           ease: "power4.out",
           duration: 0.75,
@@ -142,29 +134,34 @@ export default function Skills() {
           },
         });
       });
-    });
 
-    const skillImagesContainer = skillImagesContainerRef.current;
-    skillImagesContainer.addEventListener("mouseenter", () => {
-      gsap.to(defaultLetters, {
-        yPercent: 0,
-        ease: "power4.out",
-        duration: 0.75,
-        stagger: {
-          each: 0.025,
-          from: "center",
-        },
-      });
-    });
-    skillImagesContainer.addEventListener("mouseleave", () => {
-      gsap.to(defaultLetters, {
-        yPercent: 100,
-        ease: "power4.out",
-        duration: 0.75,
-        stagger: {
-          each: 0.025,
-          from: "center",
-        },
+      img.addEventListener("mouseleave", () => {
+        gsap.to(img, {
+          width: 70,
+          height: 70,
+          duration: 0.5,
+          ease: "power4.out",
+        });
+
+        gsap.to(letters, {
+          yPercent: 0,
+          ease: "power4.out",
+          duration: 0.75,
+          stagger: {
+            each: 0.025,
+            from: "center",
+          },
+        });
+
+        gsap.to(defaultLetters, {
+          yPercent: 100,
+          ease: "power4.out",
+          duration: 0.75,
+          stagger: {
+            each: 0.025,
+            from: "center",
+          },
+        });
       });
     });
   }, []);
