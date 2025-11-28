@@ -1,7 +1,5 @@
 "use client";
 
-import { Github, Linkedin, Mail } from "lucide-react";
-import Link from "next/link";
 import { vertexShader, fragmentShader } from "@/lib/shader";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
