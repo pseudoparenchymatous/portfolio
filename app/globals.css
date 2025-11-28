@@ -27,6 +27,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+#heroSection {
+  clip-path: polygon(0 48%, 0 48%, 0 52%, 0 52%);
+}
+
+.counter {
+  clip-path: polygon(0 0, 100% 0, 100% 100px, 0 100px);
+}
+
 .animate-about {
   --clip-value: 100%;
 }
